@@ -1,1 +1,8 @@
-<p>voice-record works!</p>
+<div class="record">
+    <button  *ngIf="!recordOwnVoiceStarted" (click)="recordVoice()">Start</button>
+    <button  *ngIf="recordOwnVoiceStarted"  (click)="recordVoice()">Stop</button>
+
+    <p>
+        <audio #recordedAudio controls autoplay></audio>
+    </p>
+</div>
